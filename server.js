@@ -8,7 +8,7 @@ if(process.env.NODE_ENV !== 'production') {
   var webpackDevMiddleware = require('webpack-dev-middleware');
   var webpackHotMiddleware = require('webpack-hot-middleware');
   var webpack = require('webpack');
-  var config = require('./webpack.config.js');
+  var config = require('./webpack.dev.config.js');
   var compiler = webpack(config);
 
   app.use(webpackHotMiddleware(compiler));

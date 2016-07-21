@@ -1,0 +1,8 @@
+--require test/setup.js
+--compilers ts:ts-node/register
+--compilers tsx:ts-node/register
+--colors
+--reporter nyan
+--watch-extensions tsx,ts
+src/**/*.test.ts
+src/**/*.test.tsx
