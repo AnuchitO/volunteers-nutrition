@@ -17,26 +17,10 @@ import NewPassword  from './components/NewPassword/NewPassword'
 
 import authStore from './stores/AuthStore';
 
-function requireAuth(nextState, replace) {
-  if (!authStore.loggedIn) {
-    replace({
-      pathname: '/signin',
-      state: { nextPathname: nextState.location.pathname }
-    });
-  }
-}
-
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={MainPage} onEnter={requireAuth} />
-      <Route path="/signup" component={SignUp} />
-      <Route path="/signin" component={SignIn} />
-      <Route path="/email-verification" component={EmailVerification} />
-      <Route path="/employee-information" component={EmployeeInformation} onEnter={requireAuth} />
-      <Route path="/customer-information" component={CustomerInformation} onEnter={requireAuth} />
-      <Route path="/new-password" component={NewPassword} onEnter={requireAuth} />
-      <Route path="/example" component={Example} />
+      <IndexRoute component={MainPage}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

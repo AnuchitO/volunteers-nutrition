@@ -9,13 +9,7 @@ import authStore, {UserProfile} from '../stores/AuthStore';
 @observer
 export default class App extends React.Component<any, any> {
   componentDidMount() {
-    return authStore.retrieveUserProfile()
-    .then((userProfile: UserProfile) => {
-      if (userProfile.needChangePassword()) {
-        hashHistory.push('new-password');
-      }
-    })
-    .catch(() => hashHistory.push('/signin'));
+    hashHistory.push('/');
   }
 
   render() {
