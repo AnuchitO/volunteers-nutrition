@@ -15,7 +15,7 @@ export default class AppBar extends React.Component<{authStore: AuthStore}, any>
       <header className="header header-brand">
         { this.props.authStore.loggedIn ? <SideMenuButton />: null }
 
-        <a className="header-logo" href="#">Call Jumper</a>
+        <a className="header-logo" href="#">Volunteers Nutrition</a>
         { this.props.authStore.loggedIn ?
           <UserBar authStore={this.props.authStore} /> : null }
       </header>
