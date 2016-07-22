@@ -8,6 +8,7 @@ export default class MainPage extends React.Component<any, any> {
     let voluns = new VolunteersStore();
     return (
       <div>
+        <h3 className="text-center">Registration</h3>
         <div className="container text-center">
           <div className="row">
             <div className="col-md-12">
@@ -28,9 +29,13 @@ class FormInfo extends React.Component<{ voluns:VolunteersStore }, any> {
   @observable phone: string = "";
 
   create = () => {
-    this.props.voluns.create(this.name, this.phone);
-    this.name = "";
-    this.phone = "";
+    if (!!this.name) {
+      this.props.voluns.create(this.name, this.phone);
+      this.name = "";
+      this.phone = "";
+    } else {
+      $('body').snackbar({content: "Required fiels Name."});
+    }
   }
 
   render() {
