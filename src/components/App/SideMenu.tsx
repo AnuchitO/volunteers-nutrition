@@ -11,7 +11,7 @@ export default class SideMenu extends React.Component<any, any> {
       <nav aria-hidden="true" className="menu" id="ui_menu" tabIndex="-1">
         <div className="menu-scroll">
           <div className="menu-content">
-            <a className="menu-logo" href="#">Call Jumper</a>
+            <a className="menu-logo" href="#">Volunteers Nutrition</a>
             <ul className="nav">
               <li>
                 <Link to={`/`} onClick={this.onMenuClick}>

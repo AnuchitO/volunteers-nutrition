@@ -12,7 +12,7 @@ export default class SignIn extends React.Component<any, any> {
   render() {
 
     return <div className="container">
-      <h2 className="text-center">Welcome to Call Jumper</h2>
+      <h2 className="text-center">Welcome to Volunteers Nutrition</h2>
       <div className="row">
         <div className="text-center content-inner col-md-4 col-md-offset-4">
           <SignInForm signInStore={signInStore} />
